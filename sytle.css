@@ -105,6 +105,7 @@ body {
 .button {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 0.5rem;
     background-color: hsl(158, 36%, 37%);
     color: white;
@@ -112,6 +113,11 @@ body {
     padding-block: 1rem;
     border: none;
     border-radius: 0.5rem;
+}
+
+button:is(:hover, :focus) {
+    cursor: pointer;
+    background-color: hsl(158, 36%, 25%);
 }
 
 .sr-only:not(:focus):not(:active) {
