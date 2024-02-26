@@ -1,7 +1,7 @@
 :root {
-    --fs-regular: 0.875rem;
-    --fs-bold: 2rem;
-    --ff-mont: Montserrat, "Sans-seriff";
+    --fs-medium: 0.875rem;
+    --fs-large: 2rem;
+    --ff-montserrat: Montserrat, "Sans-seriff";
     --ff-fraunces: Fraunces, "Seriff";
 }
 
@@ -11,23 +11,115 @@
 }
 
 img,
+picture,
+video,
+canvas,
 svg {
     display: block;
     max-width: 100%;
 }
 
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    line-height: 1.5;
+}
+
 body {
-    min-height: 100svh;
     display: grid;
     place-items: center;
-    font-family: var(--ff-mont);
-    font-size: var(--fs-regular);
+    min-height: 100svh;
+    padding: 1rem;
+    font-family: var(--ff-montserrat);
+    font-size: var(--fs-medium);
+    font-weight: 500;
     background-color: hsl(30, 38%, 92%);
+    color: hsl(228, 12%, 48%);
+}
+
+.flex-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
 }
 
 .card {
+    max-width: 37.5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 36rem;
-    background-color: hsl(0, 0%, 100%);
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+
+}
+
+@media (min-width: 600px) {
+    .card {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.card__content {
+    padding: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.card__category {
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+
+.card__title {
+    font-family: var(--ff-fraunces);
+    font-size: var(--fs-large);
+    line-height: 1;
+    color: hsl(212, 21%, 14%);
+}
+
+.card__price {
+    font-size: var(--fs-large);
+    font-weight: 700;
+    font-family: var(--ff-fraunces);
+    color: hsl(158, 36%, 37%);
+}
+
+.card__og-price {
+    text-decoration: line-through;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    font-weight: 700;
+    padding-block: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
 }
