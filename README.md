@@ -21,8 +21,8 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [solution](https://github.com/Madhu-U/Product-preview-card-component-Frontend-Mentor?tab=readme-ov-file)
+- Live Site URL: [live site](https://madhu-u.github.io/Product-preview-card-component-Frontend-Mentor/)
 
 ## My process
 
